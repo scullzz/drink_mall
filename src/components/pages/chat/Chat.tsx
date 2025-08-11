@@ -6,14 +6,13 @@ import {
   InputBase,
   Paper,
   Stack,
-  TextField,
   Typography,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import Header from "../../Header";
 
 const COLORS = {
-  bg: "#000000",  
+  bg: "#000000",
   defMessageBg: '#0D0D0D',
   messageBg: "#FFFFFF33",
   text: "#FFFFFF",
@@ -238,7 +237,7 @@ export default function Chat() {
 
           <IconButton type="submit">
             <SendIcon sx={{ fontSize: 24, color: value ? COLORS.text : COLORS.subtle }} />
-          </IconButton> 
+          </IconButton>
         </Paper>
       </Box>
     </Box>
