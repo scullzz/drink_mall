@@ -40,13 +40,12 @@ export default function Profile() {
         date: formatRuShort(item.createDttm),
         image: item.imageUrl,
       }));
-      
+
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   return (
     <Box sx={{ pb: "116px" }}>
       <Header />
-
       <Box
         sx={{
           minHeight: "100vh",

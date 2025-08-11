@@ -15,7 +15,7 @@ function useTelegramWebAppInit() {
     tg.MainButton?.hide();
 
     tg.setBackgroundColor("#FFFFFF");
-    tg.setHeaderColor("#229ED9");
+    tg.setHeaderColor("#E203A8");
   }, []);
 }
 
