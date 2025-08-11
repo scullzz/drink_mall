@@ -13,15 +13,17 @@ import BottomDrawer from "./BottomDriver";
 import { useQuery } from "@apollo/client";
 import { GIFTS_RECEIVED_QUERY, ME_QUERY } from "./query";
 import { formatRuShort } from "../../../utils/formatData";
+import { useTelegram } from "../../../utils/telegramHook";
 
 export default function Profile() {
+  const tg = useTelegram();
   const { data } = useQuery(ME_QUERY)
   const {
     data: giftsData,
   } = useQuery(GIFTS_RECEIVED_QUERY);
 
   const user = {
-    avatar: data?.me?.imageUrl,
+    avatar: tg.initDataUnsafe?.user?.photo_url,
     handle: data?.me?.username || "—",
     fullName: [data?.me?.firstName, data?.me?.lastName].filter(Boolean).join(" ") || "—",
     age: data?.me?.age ?? "—",
@@ -38,7 +40,7 @@ export default function Profile() {
         date: formatRuShort(item.createDttm),
         image: item.imageUrl,
       }));
-
+      
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   return (
