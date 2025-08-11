@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.event-carousel-dots {
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
+  left: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  padding: 0;
+  display: flex !important;
+  justify-content: flex-end;
+  z-index: 10;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .event-carousel-dots {
+    top: 20px;
+    right: 14px;
+  }
+}
+
+.event-carousel-dots li {
+  list-style: none;
+}
+
+.event-carousel-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  margin: 0 6px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.event-carousel-dots li.react-multi-carousel-dot--active button {
+  background: #ffffff;
+}
