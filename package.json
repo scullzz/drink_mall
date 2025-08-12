@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
-    "@types/telegram-web-app": "^7.10.1",
+    "@types/telegram-web-app": "^9.0.0",
     "date-fns": "^4.1.0",
     "graphql": "^16.11.0",
     "react": "^19.0.0",

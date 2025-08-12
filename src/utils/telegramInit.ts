@@ -5,6 +5,14 @@ function useTelegramWebAppInit() {
     const tg = window.Telegram?.WebApp;
     if (!tg) return;
     tg.expand();
+    tg.LocationManager.init(() => {
+      tg.LocationManager.getLocation((loc) => {
+        if (loc) {
+          const { latitude, longitude } = loc;
+          alert(latitude + " " + longitude);
+        }
+      });
+    });
 
     tg.MainButton?.setParams({
       text: "Сохранить",

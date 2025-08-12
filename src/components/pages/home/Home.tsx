@@ -38,7 +38,6 @@ const Home = () => {
         };
       });
 
-  // события для списка
   const { data: eventsData } = useQuery(EVENTS_QUERY);
 
   const eventsList =
@@ -55,7 +54,7 @@ const Home = () => {
         date: formatDateRu(e.eventDttm),
         time: formatTimeRu(e.eventDttm),
         venue: e.club?.name || "—",
-        image: e.imageUrl || bottomImage, // бэкап картинка
+        image: e.imageUrl || bottomImage,
         logo: logo,
         price: e.price ?? undefined,
         headliners: Array.isArray(e.headliners)
